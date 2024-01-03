@@ -3,6 +3,8 @@
 
 def solver(n: int = 1000):
     """function to find sum of all the digits of 2^n"""
+    if n == 0:
+        return 1
     total_product, ans = "2", 0
     for i in range(n - 1):
         next_number, current_remainder = "", 0
@@ -27,4 +29,4 @@ def solver(n: int = 1000):
 
 
 if __name__ == "__main__":
-    print(solver(15))
+    print(solver(5))
